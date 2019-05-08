@@ -9,6 +9,7 @@
 * [Contact](#contact)
 
 ## General info
+
 more general information about project. 
 
 * purpose
@@ -28,6 +29,10 @@ installation
 * installation 1
 * installation 2
 
+run
+
+* run
+
 ## Features
 
 features:
@@ -37,6 +42,7 @@ features:
 * feature 3
 
 todos:
+
 * todo 1
 * todo 2
 
