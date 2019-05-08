@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  %repo%:
+    build:
+      context: %repo%
+    container_name: %repo%
+    ports:
+      - "50000:22"
+    environment:
+      - TZ=Asiz/Tokyo
