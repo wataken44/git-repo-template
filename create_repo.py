@@ -10,7 +10,7 @@ import os
 import re
 import sys
 
-BASEDIR=os.path.dirname(__file__) + "/"
+BASEDIR=os.path.abspath(os.path.dirname(__file__)) + "/"
 
 def main():
     repo = sys.argv[1]
