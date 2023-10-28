@@ -37,20 +37,20 @@ def main():
     os.system("curl -Ssl 'https://www.gitignore.io/api/vim,emacs,visualstudiocode' > .gitignore")
 
     # create docker-compose directory
-    os.mkdir("docker")
+    os.mkdir("docker_%s" % repo)
 
     # create docker-compose.yml
     render(
         "%s/template/docker-compose.yml" % BASEDIR,
-        "docker/docker-compose.yml", user, repo)
+        "docker_%s/docker-compose.yml" % repo, user, repo)
     
     # create docker directory
-    os.mkdir("docker/%s" % repo)
+    os.mkdir("docker_%s/%s" % (repo, repo))
 
     # create Dockerfile
     render(
         "%s/template/Dockerfile" % BASEDIR,
-        "docker/%s/Dockerfile" % repo, user, repo)
+        "docker_%s/%s/Dockerfile" % (repo,repo), user, repo)
 
     # create LICENSE
     render("%s/template/LICENSE" % BASEDIR, "LICENSE" , user, repo)
